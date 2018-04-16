@@ -1,0 +1,40 @@
+{# app/Resources/views/email/contact.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ subject }}{% endblock %}
+
+{% block stylesheets %}
+    <!-- Parent CSS links -->
+    {{ parent() }}
+
+    <!-- Additional minify email CSS -->
+    <style>
+        div{font-family:"OpenSans Regular",sans-serif;background-color:#222127;
+            color:#fff;text-align:center;word-wrap:break-word;padding:15px}
+    </style>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="row">
+            <h1>Bonjour <u>{{ name }}</u></h1>
+            <br>
+            <p>{{ message }}</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div>
+        {# Assuming we have a route named "home_page" #}
+        <a href="{{ url('homepage') }}">
+            Retour sur le site.
+        </a>
+        <p>
+            © 2018 <b>FlyAround</b>. All rights reserved.
+        </p>
+    </div>
+{% endblock %}

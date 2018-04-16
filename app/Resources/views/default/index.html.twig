@@ -1,0 +1,62 @@
+{# app/Resources/default/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block stylesheets %}
+    <!-- Default CSS Symfony style for index page -->
+    <style>
+        body,code{background:#F5F5F5}body{font:18px/1.5 sans-serif}h1,h2{line-height:1.2;margin:0 0 .5em}h1{font-size:36px}h2{font-size:21px;margin-bottom:1em}
+        p{margin:0 0 1em}a{color:#0000F0}a:hover{text-decoration:none}code{max-width:100px;padding:2px 6px;word-wrap:break-word}
+        #wrapper{background:#FFF;margin:1em auto;max-width:800px;width:95%}#container{padding:2em}#welcome h1 span{display:block;font-size:75%}
+        @media (min-width:768px) {
+            #wrapper{width:80%;margin:2em auto}#next a,#status a{display:block}
+            @-webkit-keyframes fade-in{0%{opacity:0}100%{opacity:1}}
+            @keyframes fade-in{0%{opacity:0}100%{opacity:1}}}
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- PASSED W3C VALIDATOR https://validator.w3.org/ -->
+    <!-- Zero intern console warning -->
+
+    <!-- All listed routes from Symfony quests -->
+    <div id="wrapper">
+        <div id="container">
+            <div class="row">
+                <h1>Routes disponibles :</h1>
+                <ul>
+                    <li>
+                        <a href="{{ path('planemodel_index') }}">Voir les avions</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('reservation_index') }}">Voir les reservations</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('flight_index') }}">Voir les vols</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('site_index') }}">Voir les terrains</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('review_index') }}">Voir tous les avis utilisateurs</a>
+                    </li>
+                </ul>
+                <ul>
+                    {% if is_granted('ROLE_USER') %}
+                        <li>
+                            <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
+                        </li>
+                    {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+                        <li>
+                            <a href="{{ path('fos_user_security_login') }}">Se connecter</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fos_user_registration_register') }}">Créer un compte</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
