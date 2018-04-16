@@ -23,10 +23,11 @@ Go to your working folder
 
     * Clone project -> git clone <url>
     * composer install / composer update (create parameters.yml with your default config based on parameters.yml.dist)
-    * bin/console d:s:u --force (in "flyaround" database.)
-    * Import documentation/flyaround.sql
+    * bin/console d:d:c (will create flyaround database)
+    * bin/console d:s:u --force (will map all entities and create tables in "flyaround" database.)
+    * Import documentation/flyaround.sql into your flyaround DB (instead of dataFixtures)
     * bin/console c:c
     * bin/console s:r
-    * Go on localhost:8000, create a profile, log in and go to flight creation and reservation.
+    * Go on localhost:8000, create a profile, log in and go to flight creation and reservation
 
 - 16/04/2018 - V.1.0.0
