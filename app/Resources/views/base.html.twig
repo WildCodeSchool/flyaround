@@ -13,8 +13,10 @@
 
     <title>FlyAround - {% block title %}{% endblock %}</title>
 
-    <!-- CSS -->
+    <!-- CSS Webpack Vendor including Bootstrap and so on -->
+    <link rel="stylesheet" href="{{ asset('build/vendor.css') }}">
     {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/style.css') }}">
     {% endblock %}
 
     <!-- Favicons -->
@@ -22,12 +24,19 @@
 </head>
 <body>
 <header>
-    {% block header %}{% endblock %}
+    {% block header %}
+    {% endblock %}
 </header>
-{% block body %}{% endblock %}
+{% block body %}
+{% endblock %}
 <footer>
-    {% block footer %}{% endblock %}
+    {% block footer %}
+    {% endblock %}
 </footer>
-{% block javascripts %}{% endblock %}
+<!-- JS Webpack's vendor including Bootstrap.js and JQuery.js shared entry -->
+<script src="{{ asset('build/manifest.js') }}"></script>
+<script src="{{ asset('build/vendor.js') }}"></script>
+{% block javascripts %}
+{% endblock %}
 </body>
 </html>

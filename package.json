@@ -1,0 +1,41 @@
+{
+  "name": "flyaround",
+  "version": "1.1.0",
+  "description": "A Symfony 3.4.11 project in dev environment resulting from WCS's \"symfony_parcours\".",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.20.1",
+    "jquery": "^3.3.1",
+    "bootstrap-loader": "^2.2.0",
+    "bootstrap-sass": "^3.3.7",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "resolve-url-loader": "^2.3.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack-notifier": "^1.6.0"
+  },
+  "scripts": {
+    "dev-server": "./node_modules/.bin/encore dev-server",
+    "dev": "./node_modules/.bin/encore dev",
+    "webpack": "./node_modules/.bin/encore dev --watch",
+    "prod": "./node_modules/.bin/encore production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool/flyaround.git"
+  },
+  "keywords": [
+    "flyaround"
+  ],
+  "author": "Gaëtan Rolé-Dubruille",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool/flyaround/issues"
+  },
+  "homepage": "https://github.com/WildCodeSchool/flyaround#readme"
+}

@@ -46,6 +46,7 @@ class ListingController extends Controller
      * @ParamConverter("reservation",                                            options={"mapping": {"reservation_id": "id"}})
      * @ParamConverter("flight",                                                 options={"mapping": {"flight_id": "id"}})
      * @ParamConverter("planemodel",                                             options={"mapping": {"planemodel_id": "id"}})
+     * @return Response A Response instance
      */
 
     public function indexAction(Reservation $reservation, Flight $flight, PlaneModel $planemodel)

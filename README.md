@@ -3,19 +3,20 @@
 
 ## Description
 
-A Symfony 3.4.8 project in dev environment resulting from WCS's "symfony_parcours".
+A Symfony 3.4.11 project in dev environment resulting from WCS's "symfony_parcours".
 This one is based on flight sharing website linking specific users and pilots.
 
 ## Technos
 
-PHP 7.1.3 / Symfony 3.4.8 / Doctrine / MYSQL.
+PHP ^7.1 / Symfony 3.4.11 / Doctrine / MYSQL / Webpack.
 
 ## Require
     
-    * Php 7.1.3 or higher           http://php.net/downloads.php
+    * Php ^7.1.3 or higher          http://php.net/downloads.php
     * MySQL                         https://dev.mysql.com/downloads/installer/
     * Symfony Installer             https://github.com/symfony/symfony-installer
     * Composer                      https://getcomposer.org/download/
+    * npm ^5.6 or higher            https://docs.npmjs.com/getting-started/installing-node#linux                  
 
 ## Download project
 
@@ -30,4 +31,4 @@ Go to your working folder
     * bin/console s:r
     * Go on localhost:8000, create a profile, log in and go to flight creation and reservation
 
-- 16/04/2018 - V.1.0.0
+- 18/05/2018 - V.1.1.0
