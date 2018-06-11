@@ -1,12 +1,13 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
-$font-family-base: "Lato", sans-serif;
-$bg-color: #F5F5F5;
-
-// set if you're also including font-awesome
-// $fa-font-path: "~font-awesome/fonts";
-
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss";
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands.scss";
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,300,900');
 
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path : "~@fortawesome/fontawesome-free-webfonts/webfonts";
+$font-family-base: "Lato", sans-serif;
+$bg-color: #F5F5F5;
 $brand-primary: darken(#428bca, 20%);
 
 body {

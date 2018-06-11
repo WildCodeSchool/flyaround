@@ -46,7 +46,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#">Tab two</a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown Two <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Action</a></li>
                             <li role="separator" class="divider"></li>
@@ -67,41 +67,44 @@
     <div id="wrapper">
         <div id="container">
             <div class="row">
-                <h1>Routes disponibles :</h1>
+                <img src="{{ asset('build/images/plane_image_test.jpg') }}" class="img-responsive"
+                     alt="Testing image import from Webpack" title="Testing image import from Webpack">
+                <h1><i class="fas fa-paper-plane"></i> Available routes :</h1>
+                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Remember to create an account and log in before accessing to routes">
+                    Webpack's tooltip test
+                </button>
+                <br>
                 <ul>
                     <li>
-                        <a href="{{ path('planemodel_index') }}">Voir les avions</a>
+                        <a href="{{ path('planemodel_index') }}">Show planes</a>
                     </li>
                     <li>
-                        <a href="{{ path('reservation_index') }}">Voir les réservations</a>
+                        <a href="{{ path('reservation_index') }}">Show reservations</a>
                     </li>
                     <li>
-                        <a href="{{ path('flight_index') }}">Voir les vols</a>
+                        <a href="{{ path('flight_index') }}">Show flights</a>
                     </li>
                     <li>
-                        <a href="{{ path('site_index') }}">Voir les terrains</a>
+                        <a href="{{ path('site_index') }}">Show sites</a>
                     </li>
                     <li>
-                        <a href="{{ path('review_index') }}">Voir tous les avis utilisateurs</a>
+                        <a href="{{ path('review_index') }}">Show user reviews</a>
                     </li>
                 </ul>
                 <ul>
                     {% if is_granted('ROLE_USER') %}
                         <li>
-                            <a href="{{ path('fos_user_security_logout') }}">Se déconnecter</a>
+                            <a href="{{ path('fos_user_security_logout') }}">Logout</a>
                         </li>
                     {% elseif is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
                         <li>
-                            <a href="{{ path('fos_user_security_login') }}">Se connecter</a>
+                            <a href="{{ path('fos_user_security_login') }}">Login</a>
                         </li>
                         <li>
-                            <a href="{{ path('fos_user_registration_register') }}">Créer un compte</a>
+                            <a href="{{ path('fos_user_registration_register') }}">Create an account</a>
                         </li>
                     {% endif %}
                 </ul>
-                <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Pensez à bien créer un compte et d'avoir une session avant d'accéder aux routes">
-                    Tooltips !
-                </button>
             </div>
         </div>
     </div>
